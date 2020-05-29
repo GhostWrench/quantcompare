@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/GhostWrench/quantcompare/issues"
   },
-  "homepage": "https://github.com/GhostWrench/quantcompare#readme"
+  "homepage": "https://github.com/GhostWrench/quantcompare#readme",
+  "dependencies": {
+    "convert-units": "^2.3.4",
+    "js-quantities": "^1.7.5",
+    "mathjs": "^7.0.0",
+    "pqm": "^0.2.0",
+    "unitmath": "^0.8.5"
+  }
 }
