@@ -1,5 +1,9 @@
-Head to Head Comparison and Benchmark of JS Physical Quantities Libraries
+Head to Head Comparison of JS Physical Quantities Libraries
 ================================================================================
+
+The following is a head to head comparison of the features, ergonomics and 
+speed of the (apparent) top 5 JavaScript unit conversion / physical quantities / 
+dimensionally consistent math packages.
 
 Full Disclosure
 --------------------------------------------------------------------------------
@@ -13,28 +17,28 @@ using it!
 The Packages
 --------------------------------------------------------------------------------
 
-### js-quantities
+### [js-quantities](https://www.npmjs.com/package/js-quantities)
 The original, and long standing king of the hill for "pure" physical quantities 
 packages. Is actively developed and has the most active users. 
 
-### pqm
+### [pqm](https://www.npmjs.com/package/pqm)
 Physical Quantities and Measures (PQM) is a very new, very lightweight and 
 minimal package that strives to support many of the features of modern physical 
 quantities libraries. Sports strictly defined units and is tested against NIST 
 documented conversion values.
 
-### convert-units
+### [convert-units](https://www.npmjs.com/package/convert-units)
 The minimalist's conversion package, supports conversions for simple 
 (non-compound) units only, and does not support math operations on physical 
 quantities. This package has a large number of dependents and is widely used.
 
-### mathjs
+### [mathjs](https://www.npmjs.com/package/mathjs)
 Not a physical quantities package per say, but rather a large and full featured
 mathematics library. That being said it supports physical quantities just as
 well as any other package in this test, and deserves it's place as one of the
 top packages for this analysis.
 
-### unitmath
+### [unitmath](https://www.npmjs.com/package/unitmath)
 Another newcomer, but picking up steam. This is another "pure" physical 
 quantities package similar to "js-quantities" and "pqm". The unitmath package
 currently has an impressive 99% test coverage.
@@ -45,7 +49,7 @@ The Test Computer
 Dell Vostro 7590
 * CPU: Intel® Core™ i7-9750H CPU @ 2.60GHz × 12
 * RAM: 15.4 GiB
-* Disk: 128 GB NVM SSD
+* Disk: 128 GB NVMe SSD
 * OS: Ubuntu 20.04
 * Node: 14.3.0
 
@@ -61,14 +65,14 @@ The Stats
 | Unpacked Size                 | 585 kB        | 216 kB   | 106 kB        | 10.1 MB   | 522 kB   |
 | Minified Size (BundlePhobia)  | 30.1 kB       | 13.6 kB  | 23.8 kB       | 623.5 kB  | 34.1 kB  |
 | Node (CommonJS)               | Yes           | Yes      | Yes           | Yes       | Yes      |
-| Browser                       | Yes           | Yes      | No            | Yes       | No       |
+| Browser                       | Yes           | Yes      | No            | Yes       | Probably |
 | ES Module                     | Yes           | Yes      | Yes           | Yes       | Yes      |
-| Support for Unit Prefixes     | Yes           | Yes      | Partial       | Yes       | Yes      |
+| Support for Unit Prefixes     | Yes           | Yes      | Limited       | Yes       | Yes      |
 | Number of Base Units Supported| 187           | 186      | 61            | 162       | 135      |
 | Define Custom Units           | No            | Yes      | No            | Yes       | Yes      |
 | Tracks input units            | Yes           | No       | No            | Yes       | Yes      |
 | Support For Basic Math        | Yes           | Yes      | No            | Yes       | Yes      |
-| Test Coverage *               | Good          | Some     | Good          | Very Good | 99%      |
+| Test Coverage *               | Good          | Some     | Good          | Good      | 99%      |
 |                                         Supported Operators                                     |
 | Add / Subtract                | Yes           | Yes      | No            | Yes       | Yes      |
 | Multiply / Divide             | Yes           | Yes      | No            | Yes       | Yes      |
