@@ -60,4 +60,8 @@ obs.disconnect();
 obs.observe({ entryTypes: ['function'] });
 
 // Call one of the functions defined above here to benchmark performance
-//unitmathComplexConvert();
+console.log(jsQuantitiesSimpleConvert());
+console.log(pqmSimpleConvert());
+console.log(convertUnitsSimpleConvert());
+console.log(mathjsSimpleConvert());
+console.log(unitmathSimpleConvert());

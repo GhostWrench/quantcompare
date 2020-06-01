@@ -24,7 +24,10 @@ const {
 //var B = Qty(5, 'cm');
 //var C = Qty(10, 's');
 var jsqDoMath = performance.timerify(() => {
-    return ((A.mul(B.mul(B)).div(C)).mul(4)).add((A.mul(B.mul(B)).div(C)).mul(2)).sub((A.mul(B.mul(B)).div(C)).mul(3));
+    return ((A.mul(B.mul(B)).div(C.mul(C))).mul(4)).add(
+            (A.mul(B.mul(B)).div(C.mul(C))).mul(2)).sub(
+            (A.mul(B.mul(B)).div(C.mul(C))).mul(3)
+           );
 });
 
 // pqm
@@ -32,7 +35,10 @@ var jsqDoMath = performance.timerify(() => {
 //var B = pqm.quantity(5, '[c]m');
 //var C = pqm.quantity(10, 's');
 var pqmDoMath = performance.timerify(() => {
-    return ((A.mul(B.pow(2)).div(C)).mul(4)).add((A.mul(B.pow(2)).div(C)).mul(2)).sub((A.mul(B.pow(2)).div(C)).mul(3));
+    return ((A.mul(B.pow(2)).div(C.pow(2))).mul(4)).add(
+            (A.mul(B.pow(2)).div(C.pow(2))).mul(2)).sub(
+            (A.mul(B.pow(2)).div(C.pow(2))).mul(3)
+           );
 });
 
 // mathjs
@@ -42,10 +48,10 @@ var pqmDoMath = performance.timerify(() => {
 var mathjsDoMath = performance.timerify(() => {
     return math.subtract(
         math.add(
-            math.multiply(4, (A.multiply(B.pow(2)).divide(C))),
-            math.multiply(2, (A.multiply(B.pow(2)).divide(C)))
+            math.multiply(4, (A.multiply(B.pow(2)).divide(C.pow(2)))),
+            math.multiply(2, (A.multiply(B.pow(2)).divide(C.pow(2))))
         ),
-        math.multiply(3, (A.multiply(B.pow(2)).divide(C)))
+        math.multiply(3, (A.multiply(B.pow(2)).divide(C.pow(2))))
     );
 });
 
@@ -54,7 +60,10 @@ var A = unit(10, 'kg');
 var B = unit(5, 'cm');
 var C = unit(10, 's');
 var unitmathDoMath = performance.timerify(() => {
-    return ((A.mul(B.pow(2)).div(C)).mul(4)).add((A.mul(B.pow(2)).div(C)).mul(2)).sub((A.mul(B.pow(2)).div(C)).mul(3))
+    return ((A.mul(B.pow(2)).div(C.pow(2))).mul(4)).add(
+            (A.mul(B.pow(2)).div(C.pow(2))).mul(2)).sub(
+            (A.mul(B.pow(2)).div(C.pow(2))).mul(3)
+           );
 });
 
 const obs = new PerformanceObserver((list) => {
