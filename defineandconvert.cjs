@@ -60,8 +60,15 @@ obs.disconnect();
 obs.observe({ entryTypes: ['function'] });
 
 // Call one of the functions defined above here to benchmark performance
-console.log(jsQuantitiesSimpleConvert());
-console.log(pqmSimpleConvert());
-console.log(convertUnitsSimpleConvert());
-console.log(mathjsSimpleConvert());
-console.log(unitmathSimpleConvert());
+jsQuantitiesSimpleConvert(); // 5.0 ms
+//pqmSimpleConvert(); // 0.38 ms
+//convertUnitsSimpleConvert(); // 0.27 ms
+//mathjsSimpleConvert(); // 0.34 ms
+//unitmathSimpleConvert(); // 0.40 ms
+
+// Complex unit conversion
+//jsQuantitiesComplexConvert(); // 5.0 ms
+//pqmComplexConvert(); // 0.50 ms
+//convertUnitsSimpleConvert(); // error
+//mathjsComplexConvert(); // 0.44 ms
+//unitmathComplexConvert(); // 0.50 ms

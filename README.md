@@ -39,6 +39,15 @@ Another newcomer, but picking up steam. This is another "pure" physical
 quantities package similar to "js-quantities" and "pqm". The unitmath package
 currently has an impressive 99% test coverage.
 
+The Test Computer
+--------------------------------------------------------------------------------
+
+Dell Vostro 7590
+* CPU: Intel® Core™ i7-9750H CPU @ 2.60GHz × 12
+* RAM: 15.4 GiB
+* Disk: 128 GB NVM SSD
+* OS: Ubuntu 20.04
+* Node: 14.3.0
 
 The Stats
 --------------------------------------------------------------------------------
@@ -68,10 +77,10 @@ The Stats
 | Comparison Operators          | Yes           | Yes      | No            | == only   | Yes      |
 | Works with arrays             | Yes           | No       | No            | Yes       | No       |       
 |                                          Benchmarks                                             |
-| Module load time              | 12.2 ms       | 8.6 ms   | 101.9 ms      | 2306.6 ms | 141.9 ms |
-| Simple Conversion (mL -> gal) | 3.5 ms        | 0.8 ms   | 0.4 ms        | 0.55 ms   | 0.65 ms  |
-| Compound Unit Conversion      | 7.5 ms        | 1.6 ms   | N/A           | 1.3 ms    | 0.8 ms   |
-| Chained Math Operations       | 1.6 ms        | 0.3 ms   | N/A           | 0.8 ms    | 1.0 ms   | 
+| Module load time              | 4.5  ms       | 3.2 ms   | 14.7 ms       | 366 ms    | 39.5 ms  |
+| Simple Conversion (mL -> gal) | 5.0 ms        | 0.38 ms  | 0.27 ms       | 0.34 ms   | 0.40 ms  |
+| Compound Unit Conversion      | 5.0 ms        | 0.50 ms  | N/A           | 0.44 ms   | 0.50 ms  |
+| Chained Math Operations (vs. Float equiv) | 50x | 8.5x   | N/A           | 22x       | 24x      | 
 
 `* Test coverage is guessed for most packages, unless an exact value is given`
 
@@ -89,7 +98,7 @@ Starting with:
   C = 10 s
 
  Do the operation
- 
+
   4*(A * B^2 / C^2) + 2*(A * B^2 / C^2) - 3*(A * B^2 / C^2)
 
 This is also the operation that is used for the math benchmark
@@ -199,7 +208,7 @@ Using the same terse syntax as both js-quantities and pqm, this package does
 everything the best can. It has arguably the nicest output with Joules as the
 unit, a sensible prefix and it handles the floating point rounding error.
 
-Comments
+Conclusions
 --------------------------------------------------------------------------------
 
 ### js-quantities

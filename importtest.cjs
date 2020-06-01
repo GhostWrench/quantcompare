@@ -25,4 +25,11 @@ obs.observe({ entryTypes: ['function'], buffered: true });
 //require('pqm');
 //require('convert-units');
 //require('mathjs')
-//require('unitmath');
+require('unitmath');
+
+// Results
+// js-quantities -> 4.5 ms
+// pqm           -> 3.2 ms
+// convert-units -> 14.7 ms
+// mathjs        -> 336 ms
+// unitmath      -> 39.5 ms

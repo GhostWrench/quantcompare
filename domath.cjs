@@ -16,8 +16,18 @@ const {
 //     B = 5 cm
 //     C = 10 s
 // Do the operation
-//     4*(A * B^2 / C) + 2*(A * B^2 / C) - 3*(A * B^2 / C)
+//     4*(A * B^2 / C^2) + 2*(A * B^2 / C^2) - 3*(A * B^2 / C^2)
 //
+
+// raw
+//var A = 10;
+//var B = 5;
+//var C = 10;
+var rawDoMath = performance.timerify(() => {
+    return   4*(A * Math.pow(B, 2) / Math.pow(C, 2)) 
+           + 2*(A * Math.pow(B, 2) / Math.pow(C, 2))
+           - 3*(A * Math.pow(B, 2) / Math.pow(C, 2));
+});
 
 // js-quantities
 //var A = Qty(10, 'kg');
@@ -67,8 +77,8 @@ var unitmathDoMath = performance.timerify(() => {
 });
 
 const obs = new PerformanceObserver((list) => {
-console.log(list.getEntries()[0].duration);
-obs.disconnect();
+    console.log(list.getEntries()[0].duration);
+    obs.disconnect();
 });
 obs.observe({ entryTypes: ['function'] });
 
@@ -76,3 +86,10 @@ obs.observe({ entryTypes: ['function'] });
 var result = unitmathDoMath();
 // Check the output
 console.log(result.toString());
+
+// Results (Dell Vostro-7590)
+// Raw           -> 0.025 ms
+// js-quantities -> 1.25 ms (50x)
+// pqm           -> 0.21 ms (8.5x)
+// mathjs        -> 0.55 ms (22x)
+// unitmath      -> 0.60 ms (24x)
