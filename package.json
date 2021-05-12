@@ -19,7 +19,7 @@
   "dependencies": {
     "convert-units": "^2.3.4",
     "js-quantities": "^1.7.5",
-    "mathjs": "^7.0.0",
+    "mathjs": "^7.5.1",
     "pqm": "file:../pqm",
     "unitmath": "^0.8.5"
   }
